@@ -81,9 +81,8 @@ Using, the python script in  analyze_complexity_filtering.py, different complexi
 plot shows false postive counts at different thresholds. The script also produces a tsv with a table showing the numbers of false and true positives at each threshold and coverage.
 
 <figure>
-
-<src=./out_complexity_analysis/kraken_results/fpVsThrPerCov.png> 
-<figcaption> Kraken False Positive Results with Complexity Filtering </figcaption>
+	<img src=./out_complexity_analysis/kraken_results/fpVsThrPerCov.png> 
+	<figcaption> Kraken False Positive Results with Complexity Filtering </figcaption>
 </figure>
 
 ![Alt text](./out_complexity_analysis/metaphlan_results/fpVsThrPerCov.png) "Metaphlan False Positive Results with Complexity Filtering"
