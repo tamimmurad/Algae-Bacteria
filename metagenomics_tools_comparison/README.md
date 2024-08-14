@@ -7,8 +7,10 @@ This repository contains the following:
 - Analysing the performances of the tools in terms of detection with confusion matrix (true and false positives).
 - Different methods to enhance further on the tools minimizing false positives by complexity filtering and overlap.
 
-Note: The batch scripts used have headers that are specific to UPPMAX (Uppsala Multidisciplinary Center for Advanced Computational Science). Therefore, make sure that
+Note: 
+1- The batch scripts used have headers that are specific to UPPMAX (Uppsala Multidisciplinary Center for Advanced Computational Science). Therefore, make sure that
 these headers are not being used when you run the scripts on another cluster or locally.
+2- The file steps.txt contains the steps to do these analysis without explaination. 
 
 ## Methodology
 
@@ -29,26 +31,30 @@ Then using the script sample_genomes_batch.sh script, artificial metagenomic sam
         $sbatch sample_genomes_batch.sh <genomes_directory> <read_length> <output_directory> <report_files_prefix>
            
 This script uses a python script that produces one fasta file given the genomes, required coverages and read length. The script by default produces coverages of 1,3,5,10,15 and 20. For each
-of these coverages 4 random fasta files are generated. More details are provided in the documentation of both scripts under the directory /tools_testing/fasta_generation/.
+of these coverages 4 random fasta files are generated. More details are provided in the documentation of both scripts under the directory fasta_generation/.
 The script produces also a report for each fasta file showing meta data about the composition of the file such as species names, # of reads for each species and their genome size.
 
-### Running Analysis with Kraken, Bracken and Metaphlan
+### Running Metagenomics Analysis with Kraken, Bracken and Metaphlan
 
-After having the simulated fasta files, they were analyzed using Kraken2 and Metaphlan4.1. The batch scripts under tools_scripts/ were used to run on all the files.
+After having the simulated fasta files, they were analyzed using Kraken2 and Metaphlan4.1. The batch scripts under tools_bash_scripts/ were used to run on all the files.
 For Kraken2, its PlusPFP database was used built in October 2023 (https://benlangmead.github.io/aws-indexes/k2). For Metaphlan we used its SGB database with the version mpa_vJun23_CHOCOPhlAnSGB_202307.
 (https://github.com/biobakery/MetaPhlAn/wiki/MetaPhlAn-4). The output report of Kraken2 was fed to Bracken as well in order to redestribute the number of reads
 based on relative abundance then filter out reported species with less than 100 reads. This reduces the false positives of Kraken2(https://ccb.jhu.edu/software/bracken/).
 Also, we did another run of bracken without threshold. This will not reduce the false positives by Kraken2 but only redistribute reads. However, this helps collabse the Kraken2 reporting to 
-only species level. Kraken2 assigns reads to the deepest taxonomic level possible. So some of the reads are assigned to strains of some species and we are only interested in species level.
+only species level. Kraken2 assigns reads to the deepest taxonomic level possible. So, it is to be noted thatsome of the reads are assigned to strains of some species and we are only 
+interested in species level. This is resolved later on.
 meta_batch_1.sh produces bowtie files which are then fed to Metaphlan (meta_batch_2.sh)for producing the relative abundance reports. The 1st run produces classified sequence mapping to species.
 
 Notes:
+	
 	1- We are interested in the final reports of each tool. The reports provide data about the species that are detected in the samples and estimated # of reads in the fasta file
 assigned to each species. This will be enough to analyse the performance of the tools and their overlap compared to actual. However, for the enhancement of the results with sequence complexity filtering, we need 
 to get the classified sequences and their assignement. This is why we do Kraken2 with 4 outputs for each fasta file and Metaphlan two times with 2 different settings.
 	2- bowtie files produced by Metaphlan 1st run are stored in the same directory where the fasta files are. It is imortant to move them to a seperate directory.
 
 Att the end of this step we have the following results stored in seperate directories:
+
+
 	1- Kraken2 metagonimcs analysis results.
 	2- Bracken results of the above Kraken2 with one 100 as number of reads per species threshold.
 	3- Bracken results of the above Kraken2 with no threshold.	
@@ -100,11 +106,20 @@ By now we have performed metagenomics analysis on simulated 24 fasta files with 
 	7- Kraken2-Bracken and Metaphlan overlap(3&5).
 	8- Kraken2-Bracken with a threshold on bracken and Metaphlan overlap (4&5).
 
-Using the script analyze_tools_performance,py, we can examine the performance of each way above in terms of false positives and true positives. We can see the overlap methods
-provides the best results in terms of # of false positives. In terms of true positives, kraken and bracken are the best with 11 out of 12 species detected. The overlap methods
-provided the least (7 species) limited by metaphlan (8 species) and another species that was not detected with Kraken. 
+Using the script analyze_tools_performance,py, we can examine the performance of each way above in terms of false positives and true positives. 
+
+![Alt text](./final_performance_comparisons/False_Positives.svg) "False Positives Performance of Every Method"
+![Alt text](./final_performance_comparisons/True_Positives.svg) "True Positives Performance of Every Method"
+![Alt text](./final_performance_comparisons/Error_reads.png) "Error in # of Reads Assigned"
+
+We can see the overlap methods provides the best results in terms of # of false positives. In terms of true positives, kraken and bracken are the best with 11 out of 12 species detected. 
+The overlap methods provided the least (7 species) limited by metaphlan (8 species) and another species that was not detected with Kraken. 
 However, in our research, we are most interested in the bacterial species. So dropping out the two algal species and our overlp detects 7 out of 10 bacterial species (Metaphlan 
 does not have the algal species in its database). 
 Looking closely at the false species provided by the overlap at a coverage of 20, we found that they were sister species (same genus)
 of the missing ones. For example, the overlap missed Pseudomonas Fluorescens but provided Pseudomonas Lurida instead. For the same sample, bracken and metaphlan reported genera that
 are false such as Triticum and  Kitasatospora.
+Regarding the error of the number of reads assigned to a true species, we can see that the average error (over true species) is around 19% with a large variance. However, the error
+does not change with the coverage.
+
+
