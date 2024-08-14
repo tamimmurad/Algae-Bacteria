@@ -132,13 +132,16 @@ Using the script analyze_tools_performance,py, we can examine the performance of
 </figure>
 
 
+
 We can see the overlap methods provides the best results in terms of # of false positives. In terms of true positives, kraken and bracken are the best with 11 out of 12 species detected. 
 The overlap methods provided the least (7 species) limited by metaphlan (8 species) and another species that was not detected with Kraken. 
 However, in our research, we are most interested in the bacterial species. So dropping out the two algal species and our overlp detects 7 out of 10 bacterial species (Metaphlan 
 does not have the algal species in its database). 
+
 Looking closely at the false species provided by the overlap at a coverage of 20, we found that they were sister species (same genus)
 of the missing ones. For example, the overlap missed Pseudomonas Fluorescens but provided Pseudomonas Lurida instead. For the same sample, bracken and metaphlan reported genera that
 are false such as Triticum and  Kitasatospora.
+
 Regarding the error of the number of reads assigned to a true species, we can see that the average error (over true species) is around 19% with a large variance. However, the error
 does not change with the coverage.
 
