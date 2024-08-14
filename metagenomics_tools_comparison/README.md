@@ -85,7 +85,11 @@ plot shows false postive counts at different thresholds. The script also produce
 	<figcaption> Kraken False Positive Results with Complexity Filtering </figcaption>
 </figure>
 
-![Alt text](./out_complexity_analysis/metaphlan_results/fpVsThrPerCov.png) "Metaphlan False Positive Results with Complexity Filtering"
+<figure>
+	<img src=./out_complexity_analysis/metaphlan_results/fpVsThrPerCov.png> 
+	<figcaption> Metaphlan False Positive Results with Complexity Filtering </figcaption>
+</figure>
+
 
 We can see from the plot that metaphlan performed best in terms of minimum false positive while maintaing true positives at a complexity threshold 0.7 
 while Kraken2 at a complexity level 0.8.
@@ -112,9 +116,21 @@ By now we have performed metagenomics analysis on simulated 24 fasta files with 
 
 Using the script analyze_tools_performance,py, we can examine the performance of each way above in terms of false positives and true positives. 
 
-![Alt text](./final_performance_comparisons/False_Positives.svg) "False Positives Performance of Every Method"
-![Alt text](./final_performance_comparisons/True_Positives.svg) "True Positives Performance of Every Method"
-![Alt text](./final_performance_comparisons/Error_Reads.png) "Error in # of Reads Assigned"
+<figure>
+	<img src=./final_performance_comparisons/False_Positives.svg> 
+	<figcaption> False Positives Performance of Every Method </figcaption>
+</figure>
+
+<figure>
+	<img src=./final_performance_comparisons/True_Positives.svg> 
+	<figcaption> True Positives Performance of Every Method </figcaption>
+</figure>
+
+<figure>
+	<img src=./final_performance_comparisons/Error_Reads.png> 
+	<figcaption> Error in # of Reads Assigned </figcaption>
+</figure>
+
 
 We can see the overlap methods provides the best results in terms of # of false positives. In terms of true positives, kraken and bracken are the best with 11 out of 12 species detected. 
 The overlap methods provided the least (7 species) limited by metaphlan (8 species) and another species that was not detected with Kraken. 
