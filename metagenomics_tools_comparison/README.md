@@ -86,15 +86,11 @@ plot shows false postive counts at different thresholds. The script also produce
 	<em>Fig1. Kraken False Positive Results with Complexity Filtering</em>
 </div>
 
-<figure style="text-align: center;">
-	<img src="./out_complexity_analysis/kraken_results/fpVsThrPerCov.png" style="display: block; margin: 0 auto;"> 
-	<figcaption><em> Fig1. Kraken False Positive Results with Complexity Filtering </em></figcaption>
-</figure>
-
-<figure style="text-align: center;">
-	<img src="./out_complexity_analysis/metaphlan_results/fpVsThrPerCov.png" style="display: block; margin: 0 auto;"> 
-	<em> Fig2. Metaphlan False Positive Results with Complexity Filtering </em>
-</figure>
+<div align="center"> 
+	<img src="./out_complexity_analysis/metaphlan_results/fpVsThrPerCov.png" alt="Fig2. Metaphlan False Positive Results with Complexity Filtering"> 
+	<br> 
+	<em>Fig2. Metaphlan False Positive Results with Complexity Filtering</em>
+</div>
 
 
 We can see from the plot that metaphlan performed best in terms of minimum false positive while maintaing true positives at a complexity threshold 0.7 
@@ -122,20 +118,24 @@ By now we have performed metagenomics analysis on simulated 24 fasta files with 
 
 Using the script analyze_tools_performance,py, we can examine the performance of each way above in terms of false positives and true positives. 
 
-<figure style="text-align: center;">
-	<img src="./final_performance_comparisons/False_Positives.svg" style="display: block; margin: 0 auto;"> 
-	<em> Fig3. False Positives Performance of Every Method</em>
-</figure>
+<div align="center"> 
+	<img src="./final_performance_comparisons/False_Positives.svg" alt="Fig3. False Positives Performance of Every Method"> 
+	<br> 
+	<em>Fig3. False Positives Performance of Every Method</em>
+</div>
 
-<figure style="text-align: center;">
-	<img src="./final_performance_comparisons/True_Positives.svg" style="display: block; margin: 0 auto;"> 
+
+<div align="center"> 
+	<img src="./final_performance_comparisons/True_Positives.svg"alt="Fig4. True Positives Performance of Every Method"> 
+	<br> 
 	<em>Fig4. True Positives Performance of Every Method</em>
-</figure>
+</div>
 
-<figure style="text-align: center;">
-	<img src="./final_performance_comparisons/Error_Reads.png" style="display: block; margin: 0 auto;"> 
-	<em> Fig5. Error in # of Reads Assigned</em>
-</figure>
+<div align="center"> 
+	<img src="./final_performance_comparisons/Error_Reads.png"alt="Fig5. Error in # of Reads Assigned"> 
+	<br> 
+	<em>Fig5. Error in # of Reads Assigned</em>
+</div>
 
 
 
