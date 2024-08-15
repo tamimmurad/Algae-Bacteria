@@ -80,6 +80,12 @@ By now we have one directory for Kraken2 and one for Metaphlan of classified seq
 Using, the python script in  analyze_complexity_filtering.py, different complexity thresholds are tested and we can see which one performed best in terms of true and false positives. The following
 plot shows false postive counts at different thresholds. The script also produces a tsv with a table showing the numbers of false and true positives at each threshold and coverage.
 
+<div align="center"> 
+	<img src="./out_complexity_analysis/kraken_results/fpVsThrPerCov.png" alt="Fig1. Kraken False Positive Results with Complexity Filtering"> 
+	<br> 
+	<em>Fig1. Kraken False Positive Results with Complexity Filtering</em>
+</div>
+
 <figure style="text-align: center;">
 	<img src="./out_complexity_analysis/kraken_results/fpVsThrPerCov.png" style="display: block; margin: 0 auto;"> 
 	<figcaption><em> Fig1. Kraken False Positive Results with Complexity Filtering </em></figcaption>
