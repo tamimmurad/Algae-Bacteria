@@ -81,12 +81,12 @@ Using, the python script in  analyze_complexity_filtering.py, different complexi
 plot shows false postive counts at different thresholds. The script also produces a tsv with a table showing the numbers of false and true positives at each threshold and coverage.
 
 <figure style="text-align: center;">
-	<img src=./out_complexity_analysis/kraken_results/fpVsThrPerCov.png> 
+	<img src="./out_complexity_analysis/kraken_results/fpVsThrPerCov.png" style="display: block; margin: 0 auto;"> 
 	<em> Fig1. Kraken False Positive Results with Complexity Filtering </em>
 </figure>
 
 <figure style="text-align: center;">
-	<img src=./out_complexity_analysis/metaphlan_results/fpVsThrPerCov.png> 
+	<img src="./out_complexity_analysis/metaphlan_results/fpVsThrPerCov.png" style="display: block; margin: 0 auto;"> 
 	<em> Fig2. Metaphlan False Positive Results with Complexity Filtering </em>
 </figure>
 
@@ -117,17 +117,17 @@ By now we have performed metagenomics analysis on simulated 24 fasta files with 
 Using the script analyze_tools_performance,py, we can examine the performance of each way above in terms of false positives and true positives. 
 
 <figure style="text-align: center;">
-	<img src=./final_performance_comparisons/False_Positives.svg> 
+	<img src="./final_performance_comparisons/False_Positives.svg" style="display: block; margin: 0 auto;"> 
 	<em> Fig3. False Positives Performance of Every Method</em>
 </figure>
 
 <figure style="text-align: center;">
-	<img src=./final_performance_comparisons/True_Positives.svg> 
+	<img src="./final_performance_comparisons/True_Positives.svg" style="display: block; margin: 0 auto;"> 
 	<em>Fig4. True Positives Performance of Every Method</em>
 </figure>
 
 <figure style="text-align: center;">
-	<img src=./final_performance_comparisons/Error_Reads.png> 
+	<img src="./final_performance_comparisons/Error_Reads.png" style="display: block; margin: 0 auto;"> 
 	<em> Fig5. Error in # of Reads Assigned</em>
 </figure>
 
