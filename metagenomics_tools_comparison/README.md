@@ -80,12 +80,12 @@ By now we have one directory for Kraken2 and one for Metaphlan of classified seq
 Using, the python script in  analyze_complexity_filtering.py, different complexity thresholds are tested and we can see which one performed best in terms of true and false positives. The following
 plot shows false postive counts at different thresholds. The script also produces a tsv with a table showing the numbers of false and true positives at each threshold and coverage.
 
-<figure>
+<figure style="test-align: center;">
 	<img src=./out_complexity_analysis/kraken_results/fpVsThrPerCov.png> 
 	<em> Fig1. Kraken False Positive Results with Complexity Filtering </em>
 </figure>
 
-<figure>
+<figure style="test-align: center;">
 	<img src=./out_complexity_analysis/metaphlan_results/fpVsThrPerCov.png> 
 	<em> Fig2. Metaphlan False Positive Results with Complexity Filtering </em>
 </figure>
@@ -116,17 +116,17 @@ By now we have performed metagenomics analysis on simulated 24 fasta files with 
 
 Using the script analyze_tools_performance,py, we can examine the performance of each way above in terms of false positives and true positives. 
 
-<figure>
+<figure style="test-align: center;">
 	<img src=./final_performance_comparisons/False_Positives.svg> 
 	<em> Fig3. False Positives Performance of Every Method</em>
 </figure>
 
-<figure>
+<figure style="test-align: center;">
 	<img src=./final_performance_comparisons/True_Positives.svg> 
 	<em>Fig4. True Positives Performance of Every Method</em>
 </figure>
 
-<figure>
+<figure style="test-align: center;">
 	<img src=./final_performance_comparisons/Error_Reads.png> 
 	<em> Fig5. Error in # of Reads Assigned</em>
 </figure>
