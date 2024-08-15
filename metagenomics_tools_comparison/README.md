@@ -82,7 +82,7 @@ plot shows false postive counts at different thresholds. The script also produce
 
 <figure style="text-align: center;">
 	<img src="./out_complexity_analysis/kraken_results/fpVsThrPerCov.png" style="display: block; margin: 0 auto;"> 
-	<em> Fig1. Kraken False Positive Results with Complexity Filtering </em>
+	<figcaption><em> Fig1. Kraken False Positive Results with Complexity Filtering </em></figcaption>
 </figure>
 
 <figure style="text-align: center;">
