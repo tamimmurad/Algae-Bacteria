@@ -82,12 +82,12 @@ plot shows false postive counts at different thresholds. The script also produce
 
 <figure>
 	<img src=./out_complexity_analysis/kraken_results/fpVsThrPerCov.png> 
-	<em> *Fig1. Kraken False Positive Results with Complexity Filtering* </em>
+	<em> Fig1. Kraken False Positive Results with Complexity Filtering </em>
 </figure>
 
 <figure>
 	<img src=./out_complexity_analysis/metaphlan_results/fpVsThrPerCov.png> 
-	<figcaption> *Fig2. Metaphlan False Positive Results with Complexity Filtering* </figcaption>
+	<em> Fig2. Metaphlan False Positive Results with Complexity Filtering </em>
 </figure>
 
 
@@ -118,17 +118,17 @@ Using the script analyze_tools_performance,py, we can examine the performance of
 
 <figure>
 	<img src=./final_performance_comparisons/False_Positives.svg> 
-	<figcaption> *Fig3. False Positives Performance of Every Method* </figcaption>
+	<em> Fig3. False Positives Performance of Every Method</em>
 </figure>
 
 <figure>
 	<img src=./final_performance_comparisons/True_Positives.svg> 
-	<figcaption> *Fig4. True Positives Performance of Every Method* </figcaption>
+	<em>Fig4. True Positives Performance of Every Method</em>
 </figure>
 
 <figure>
 	<img src=./final_performance_comparisons/Error_Reads.png> 
-	<figcaption> *Fig5. Error in # of Reads Assigned* </figcaption>
+	<em> Fig5. Error in # of Reads Assigned</em>
 </figure>
 
 
