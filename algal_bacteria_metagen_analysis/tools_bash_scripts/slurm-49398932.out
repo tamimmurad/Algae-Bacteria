@@ -1,0 +1,410 @@
+Starting with species number 1
+mkdir: cannot create directory ‘../out_tools/Chlamydomonas_asymmetrica/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Chlamydomonas_asymmetrica/overlap/////////////
+Bracken: 5112685 Meta: 16689 Total: 103051630
+Starting with species number 2
+mkdir: cannot create directory ‘../out_tools/Chlamydomonas_callosa/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Chlamydomonas_callosa/overlap/////////////
+Bracken: 10343722 Meta: 798 Total: 110173656
+Starting with species number 3
+mkdir: cannot create directory ‘../out_tools/Chlamydomonas_cribrum/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Chlamydomonas_cribrum/overlap/////////////
+Bracken: 10936392 Meta: 5421727 Total: 110162432
+Starting with species number 4
+mkdir: cannot create directory ‘../out_tools/Chlamydomonas_fottii/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Chlamydomonas_fottii/overlap/////////////
+Bracken: 8218175 Meta: 38872 Total: 85390156
+Starting with species number 5
+mkdir: cannot create directory ‘../out_tools/Chlamydomonas_globosa/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Chlamydomonas_globosa/overlap/////////////
+Bracken: 22457645 Meta: 1827694 Total: 110522588
+Starting with species number 6
+mkdir: cannot create directory ‘../out_tools/Chlamydomonas_isabeliensis/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Chlamydomonas_isabeliensis/overlap/////////////
+Bracken: 16189290 Meta: 10173644 Total: 99145066
+Starting with species number 7
+mkdir: cannot create directory ‘../out_tools/Chlamydomonas_latifons/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Chlamydomonas_latifons/overlap/////////////
+Bracken: 10245084 Meta: 1061608 Total: 92786532
+Starting with species number 8
+mkdir: cannot create directory ‘../out_tools/Chlamydomonas_parallestriata/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Chlamydomonas_parallestriata/overlap/////////////
+Bracken: 7465830 Meta: 3089 Total: 83696300
+Starting with species number 9
+mkdir: cannot create directory ‘../out_tools/Chlamydomonas_parallestriata_s2/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Chlamydomonas_parallestriata_s2/overlap/////////////
+Bracken: 16004985 Meta: 824501 Total: 104845272
+Starting with species number 10
+mkdir: cannot create directory ‘../out_tools/Chlamydomonas_parallestriata_s3/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Chlamydomonas_parallestriata_s3/overlap/////////////
+Bracken: 13339111 Meta: 1040021 Total: 112674240
+Starting with species number 11
+mkdir: cannot create directory ‘../out_tools/Chlamydomonas_parallestriata_s4/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Chlamydomonas_parallestriata_s4/overlap/////////////
+Bracken: 10328543 Meta: 546121 Total: 100322168
+Starting with species number 12
+mkdir: cannot create directory ‘../out_tools/Chlamydomonas_parallestriata_s5/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Chlamydomonas_parallestriata_s5/overlap/////////////
+Bracken: 17547272 Meta: 939531 Total: 117674294
+Starting with species number 13
+mkdir: cannot create directory ‘../out_tools/Chlamydomonas_parallestriata_s6/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Chlamydomonas_parallestriata_s6/overlap/////////////
+Bracken: 13780497 Meta: 1212350 Total: 112547060
+Starting with species number 14
+mkdir: cannot create directory ‘../out_tools/Chlamydomonas_petasus/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Chlamydomonas_petasus/overlap/////////////
+Bracken: 16559271 Meta: 1992390 Total: 91679522
+Starting with species number 15
+mkdir: cannot create directory ‘../out_tools/Chlamydomonas_pila/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Chlamydomonas_pila/overlap/////////////
+Bracken: 7800904 Meta: 335 Total: 76019326
+Starting with species number 16
+mkdir: cannot create directory ‘../out_tools/Chlamydomonas_schloesseri/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Chlamydomonas_schloesseri/overlap/////////////
+Bracken: 17160898 Meta: 814180 Total: 106490440
+Starting with species number 17
+mkdir: cannot create directory ‘../out_tools/Chlamydomonas_sp./overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Chlamydomonas_sp./overlap/////////////
+Bracken: 10980261 Meta: 7517113 Total: 117475804
+Starting with species number 18
+mkdir: cannot create directory ‘../out_tools/Chlamydomonas_typica/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Chlamydomonas_typica/overlap/////////////
+Bracken: 24255412 Meta: 7567938 Total: 122803154
+Starting with species number 19
+mkdir: cannot create directory ‘../out_tools/Chlamydomonas_typica_s2/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Chlamydomonas_typica_s2/overlap/////////////
+Bracken: 8874989 Meta: 4690637 Total: 96641050
+Starting with species number 20
+mkdir: cannot create directory ‘../out_tools/Chlamydomonas_zebra/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Chlamydomonas_zebra/overlap/////////////
+Bracken: 7166387 Meta: 32148 Total: 89329700
+Starting with species number 21
+mkdir: cannot create directory ‘../out_tools/Eudorina_elegans/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Eudorina_elegans/overlap/////////////
+Bracken: 10565562 Meta: 1595781 Total: 73188484
+Starting with species number 22
+mkdir: cannot create directory ‘../out_tools/Eudorina_unicocca/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Eudorina_unicocca/overlap/////////////
+Bracken: 10981536 Meta: 6024725 Total: 83130468
+Starting with species number 23
+mkdir: cannot create directory ‘../out_tools/Haematococcus_lacustris/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Haematococcus_lacustris/overlap/////////////
+Bracken: 26833920 Meta: 3907016 Total: 136121788
+Starting with species number 24
+mkdir: cannot create directory ‘../out_tools/Lobomonas_rostrata/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Lobomonas_rostrata/overlap/////////////
+Bracken: 7935894 Meta: 2852 Total: 96251266
+Starting with species number 25
+mkdir: cannot create directory ‘../out_tools/Microglena_globulifera/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Microglena_globulifera/overlap/////////////
+Bracken: 17709211 Meta: 4598579 Total: 126461772
+Starting with species number 26
+mkdir: cannot create directory ‘../out_tools/Pandorina_morum/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Pandorina_morum/overlap/////////////
+Bracken: 19358465 Meta: 3270814 Total: 75876208
+Starting with species number 27
+mkdir: cannot create directory ‘../out_tools/Pandorina_sp./overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Pandorina_sp./overlap/////////////
+Bracken: 9539235 Meta: 2038122 Total: 82197028
+Starting with species number 28
+mkdir: cannot create directory ‘../out_tools/Paulschulzia_pseudovolvox/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Paulschulzia_pseudovolvox/overlap/////////////
+Bracken: 12859872 Meta: 6551395 Total: 86626510
+Starting with species number 29
+mkdir: cannot create directory ‘../out_tools/Tetrabaena_socialis/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Tetrabaena_socialis/overlap/////////////
+Bracken: 14237182 Meta: 5457019 Total: 97411588
+Starting with species number 30
+mkdir: cannot create directory ‘../out_tools/Tetraspora_cylindrica/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Tetraspora_cylindrica/overlap/////////////
+Bracken: 8127087 Meta: 1229543 Total: 74775032
+Starting with species number 31
+mkdir: cannot create directory ‘../out_tools/Vitreochlamys_aulata/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Vitreochlamys_aulata/overlap/////////////
+Bracken: 5188460 Meta: 1993047 Total: 53375922
+Starting with species number 32
+mkdir: cannot create directory ‘../out_tools/Vitreochlamys_fluviatilis/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Vitreochlamys_fluviatilis/overlap/////////////
+Bracken: 7487921 Meta: 2559315 Total: 76777404
+Starting with species number 33
+mkdir: cannot create directory ‘../out_tools/Vitreochlamys_ordinata/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Vitreochlamys_ordinata/overlap/////////////
+Bracken: 12789331 Meta: 1137940 Total: 95635784
+Starting with species number 34
+mkdir: cannot create directory ‘../out_tools/Vitreochlamys_ordinata_s2/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Vitreochlamys_ordinata_s2/overlap/////////////
+Bracken: 13091372 Meta: 343710 Total: 130901306
+Starting with species number 35
+mkdir: cannot create directory ‘../out_tools/Vitreochlamys_spec./overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Vitreochlamys_spec./overlap/////////////
+Bracken: 3860558 Meta: 21159 Total: 59967820
+Starting with species number 36
+mkdir: cannot create directory ‘../out_tools/Volvox_aureus/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Volvox_aureus/overlap/////////////
+Bracken: 4768335 Meta: 944106 Total: 46798018
+Starting with species number 37
+mkdir: cannot create directory ‘../out_tools/Volvox_barberi/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Volvox_barberi/overlap/////////////
+Bracken: 4167546 Meta: 4900 Total: 119802074
+Starting with species number 38
+mkdir: cannot create directory ‘../out_tools/Volvox_giga/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Volvox_giga/overlap/////////////
+Bracken: 12046884 Meta: 10119 Total: 119892570
+Starting with species number 39
+mkdir: cannot create directory ‘../out_tools/Volvox_globator/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Volvox_globator/overlap/////////////
+Bracken: 5801593 Meta: 149735 Total: 109134844
+Starting with species number 40
+mkdir: cannot create directory ‘../out_tools/Volvox_sp./overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Volvox_sp./overlap/////////////
+Bracken: 9646343 Meta: 3582547 Total: 97831638
+Starting with species number 41
+mkdir: cannot create directory ‘../out_tools/Volvox_tertius/overlap’: File exists
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:99: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapResults.to_csv(overlapDir+'overlap_result.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:100: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  overlapStatDf.to_csv(overlapDir+'overlap_stat.tsv','\t')
+/home/tamimftn/Desktop/algae_bac/code/metagenomics_tools_comparison/overlap_analysis/analyze_br_meta_overlap.py:101: FutureWarning: Starting with pandas version 3.0 all arguments of to_csv except for the argument 'path_or_buf' will be keyword-only.
+  readsCountDF.to_csv(overlapDir+'reads_stat.tsv','\t')
+//////////////Printing files for: ../out_tools/Volvox_tertius/overlap/////////////
+Bracken: 3915126 Meta: 9590 Total: 70446910
