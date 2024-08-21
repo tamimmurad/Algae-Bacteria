@@ -34,11 +34,14 @@ For each species' directory, an additional folder named overlap contains the ove
 
 In order to aggregate the results of the overlaps in one informative file, the python script map_algae_bacteria.py is used. It outputs a table (or matrix) where the rows are all the microbial
 species (all bacteria except for one in our samples) and the columns are all the algal species we have samples for. Additianl columns are there as well for the microbs' taxonomical ids and their lineages.
+
 Att the intersection of the microbial species and the algal species, the overlap average number of reads is reported. Another file with the same is output also with overlap relative abundance instead of the
 number of reads.
+
 It is worth mentioning how we define the overlap relative abundance. Braken reports the total number of reads assigned to each species in the sample. Metaphlan reports the estimated number of reads that
 were a hit to the marker gene of each species. In our method we first calculate the percentage of reads by each tool for each overlapped species.Then we canclualte the average of that in order to get the Overlap
 Relative Abundance (ORA). 
+
 Example: The overlap between Bracken and Metaphlan of a metagenomics sample resulted in two species A and B. Bracken assigned 50 and 100 reads to A & B respectively while metaphlan assigned 10 and 12.
 Now the relative abundance of A and B in Bracken will be 0.33 and 0.66. The relative abundances in Metaphlan are 0.45 and 0.55. The Overlap Relative Abundances (ORAs) are 0.39 and 0.605 for A and B.
 
