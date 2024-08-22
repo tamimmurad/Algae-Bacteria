@@ -78,3 +78,21 @@ bacterial species (63 species)that is only present in multicellular bacteria. Ev
 	<em>Fig4. ORA of Unicellular specific bacterial species by class.</em>
 </div>
 
+Finally, we performed PCA analysis to check if there is any clustering of multicellular and unicellular algae in two ways. One was done with the ORA of bacterial
+species and another one with the presence and absence only (0 for absent and 1 for present). The results are show below of PC1 and PC2.
+
+
+<div align="center"> 
+	<img src="./figures/wo_callosa_PCA_BY_Species.png"alt="Fig5. PCA with overlap relative abundance."> 
+	<br> 
+	<em>Fig5. PCA with overlap relative abundance.</em>
+</div>
+
+<div align="center"> 
+	<img src="./figures/wo_callosa_detPCA_BY_Species.png"alt="Fig6. PCA with presence/absence."> 
+	<br> 
+	<em>Fig6. PCA with presence/absence..</em>
+</div>
+
+
+
