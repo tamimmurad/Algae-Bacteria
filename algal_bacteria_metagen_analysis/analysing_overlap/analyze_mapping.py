@@ -75,12 +75,21 @@ for bac in bacDetInAlgSamps.index:
         if bacDetInAlgSamps.loc[bac,alg] > 0:
             bacDetInAlgSamps.loc[bac,alg]=1
 
+# Assuming bacRAinAlgSamps is your DataFrame
+uniqueClasses = set(bacRAinAlgSamps['Class'].str.replace('c__',''))
+# Generate colors using cm.tab20 
+colorPalette = cm.tab20.colors # This gives us a list of 20 colors
+ # Map each class to a color
+colorMap = {class_name: colorPalette[i % len(colorPalette)] for i, class_name in enumerate(uniqueClasses)}
+ 
 #Data without Chlamydomonas_callosa.
 bacRAinAlgSampsWoCall = bacRAinAlgSamps.drop(columns=['Chlamydomonas_callosa'])
 bacDetinAlgSampsWoCall = bacDetInAlgSamps.drop(columns=['Chlamydomonas_callosa'])
 algaCellPhenWoCall = algaCellPhen[algaCellPhen['Species']!='Chlamydomonas_callosa']
 uniCellAlgWoCall = uniCellAlg.copy()
 uniCellAlgWoCall.remove('Chlamydomonas_callosa')
+
+
 
 
 # =============================================================================
@@ -97,7 +106,7 @@ uniCellAlgWoCall.remove('Chlamydomonas_callosa')
         1- Legend object for the figure which is also saved as png file in the same directory.
         2- A dataframe of the aggregated RA Table.
 '''
-def produce_stacked_chart(mappingMatrix,aggTaxLevel,algaCellPhen,figType,outDir,logScale =None,phylum=None):
+def produce_stacked_chart(mappingMatrix,aggTaxLevel,algaCellPhen,figType,outDir,colorMap,logScale =None,phylum=None):
     
     #If only one bacterial phylum is requested to be checked.
     if phylum:
@@ -123,10 +132,11 @@ def produce_stacked_chart(mappingMatrix,aggTaxLevel,algaCellPhen,figType,outDir,
     #Remove unwanted character from bacterial species taxa.
     aggrgatedT.columns=aggrgatedT.columns.str.replace(r'.__','',regex=True)
     
+    colors = [colorMap.get(className, "#333333") for className in aggrgatedT.columns]
     #Stacked par plot of bacterial RAs for each specified algal species.
     if figType !='All':
         figure,ax = plt.subplots(figsize=(15,8))
-        figure = aggrgatedT.plot.bar(stacked=True,ax=ax,rot = 90,colormap=cm.tab20,logy=logScale,fontsize=20).legend(bbox_to_anchor=(1.0,1.0))
+        figure = aggrgatedT.plot.bar(stacked=True,ax=ax,rot = 90,color=colors,logy=logScale,fontsize=20).legend(bbox_to_anchor=(1.0,1.0))
         figure.set_title('Bacterial '+ aggTaxLevel)
         plt.title(figType+' Specific Bacteria Relative Abundance by '+ aggTaxLevel + ' in ' + figType +' Algal Samples',fontsize=20)
         plt.savefig(outDir+figType +'by_algae_bac_by_'+aggTaxLevel+'.png', format='png', dpi=300, bbox_inches='tight')
@@ -145,7 +155,7 @@ def produce_stacked_chart(mappingMatrix,aggTaxLevel,algaCellPhen,figType,outDir,
         finalDF=pd.concat([finalDF,emptyDF])
         
         figure,ax = plt.subplots(figsize=(15,8))
-        figure = finalDF.plot.bar(stacked=True,ax=ax,rot = 90,colormap=cm.tab20,logy=logScale).legend(bbox_to_anchor=(1.0,1.0))
+        figure = finalDF.plot.bar(stacked=True,ax=ax,rot = 90,color=colors,logy=logScale).legend(bbox_to_anchor=(1.0,1.0))
         figure.set_title('Bacterial '+ aggTaxLevel)
         plt.title('Bacteria Relative Abundance by '+ aggTaxLevel + ' in  '+ figType +' Algal samples',fontsize=20)
         plt.savefig(outDir+figType+'_'+aggTaxLevel+'.png', format='png', dpi=300, bbox_inches='tight')
@@ -155,7 +165,7 @@ def produce_stacked_chart(mappingMatrix,aggTaxLevel,algaCellPhen,figType,outDir,
 # =============================================================================
 # Function produce_pie_chart
 # =============================================================================
-def produce_pie_chart(mappingMatrix,aggTaxLevel,algaCellPhen,outDir,phylum=None):
+def produce_pie_chart(mappingMatrix,aggTaxLevel,algaCellPhen,outDir,colorMap,phylum=None):
     #If only one phylum is requested to be checked.
     if phylum:
         #Aggregaring RA over the specified tax level.
@@ -173,12 +183,15 @@ def produce_pie_chart(mappingMatrix,aggTaxLevel,algaCellPhen,outDir,phylum=None)
     aggrgatedT = aggrgated.set_index(aggTaxLevel).transpose()
     
     aggrgatedT.columns=aggrgatedT.columns.str.replace(r'.__','',regex=True)
+    
     #Totals of bacteria RA in each taxonimc group as per the taxa level in the specified algal species.
     totalBac=aggrgatedT.sum()
     
+    colors = [colorMap.get(className, "#333333") for className in totalBac.index] # Default to grey if not found
+    
     #Pi chart showing RA of bacteria over all specified species.
     plt.figure()
-    piChart= totalBac.plot.pie(colormap=cm.tab20,labels=['']*len(totalBac),autopct='%1.1f%%')
+    piChart= totalBac.plot.pie(color=colors,labels=['']*len(totalBac),autopct='%1.1f%%')
     plt.legend(totalBac.index,bbox_to_anchor=(1.0,1.0),title='Bacterial '+aggTaxLevel)
     plt.title('Bacteria Overall Relative Abundance by '+ aggTaxLevel + ' in '  +' Algal Samples')
     plt.savefig(outDir+'overall_bac_by_'+aggTaxLevel+'.png', format='png', dpi=300, bbox_inches='tight')
@@ -227,21 +240,22 @@ def perform_pca(matrix,aggTaxLevel,uniCellAlg,multiCellAlg,outDir):
     plt.savefig(outDir+'PCA_BY_'+aggTaxLevel+'.png', format='png', dpi=300, bbox_inches='tight')
     explained_variance = pca.explained_variance_ratio_
     return explained_variance
-
+#%%
 # =============================================================================
 # Generating Figures.
 # =============================================================================
-#Bacterial classes RA for every algal sample.
-bacRAbyClassFig = produce_stacked_chart(bacRAinAlgSamps, 'Class', algaCellPhen, 'All',outDir=outDir,logScale=False)
-
 #Bacterial classes RA for overall samples.
-bacteriaRAPiChart=produce_pie_chart(bacRAinAlgSamps,'Class',algaCellPhen,outDir=outDir,phylum=None)
+bacteriaRAPiChart=produce_pie_chart(bacRAinAlgSamps,'Class',algaCellPhen,outDir=outDir,colorMap=colorMap,phylum=None)
+
+#Bacterial classes RA for every algal sample.
+bacRAbyClassFig = produce_stacked_chart(bacRAinAlgSamps, 'Class', algaCellPhen, 'All',outDir=outDir,colorMap=colorMap,logScale=False)
+
 
 #Bacterial classes RA for multicellular specific bacteria.
-multiSpBacFig = produce_stacked_chart(multiSpecificBac,'Class',algaCellPhen[algaCellPhen['Phenotype']=='Multi'],'Multicellular',outDir=outDir,logScale=True)
+multiSpBacFig = produce_stacked_chart(multiSpecificBac,'Class',algaCellPhen[algaCellPhen['Phenotype']=='Multi'],'Multicellular',outDir=outDir,colorMap=colorMap,logScale=True)
 
 #Bacterial classes RA for unicellular specific bacteria.
-uniSpecificBacFig = produce_stacked_chart(uniSpecificBac,'Class',algaCellPhen[algaCellPhen['Phenotype']=='Uni'],'Unicellular',outDir=outDir,logScale=True)
+uniSpecificBacFig = produce_stacked_chart(uniSpecificBac,'Class',algaCellPhen[algaCellPhen['Phenotype']=='Uni'],'Unicellular',outDir=outDir,colorMap=colorMap,logScale=True)
 
 #PCA by species for ORA.
 varRASpecies = perform_pca(bacRAinAlgSamps, 'Species', uniCellAlg, multiCellAlg,outDir=outDir)
