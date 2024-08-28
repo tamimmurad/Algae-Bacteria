@@ -73,11 +73,11 @@ cladeName =[]
 for sp in algSpecies:
     overlapDict[sp] = pd.read_csv(algaeSpeciesFolder+sp+'/'+'overlap/'+'/overlap_result.tsv',sep='\t',index_col=0)
     #Calculate overlap relative abundance for bracken.
-    overlapDict[sp]['Norm_Bracken'] = round(overlapDict[sp]['new_est_reads']/sum(overlapDict[sp]['new_est_reads']),4)
+    overlapDict[sp]['Norm_Bracken'] = round(overlapDict[sp]['new_est_reads']/sum(overlapDict[sp]['new_est_reads']),6)
     #Calculate overlap relative abundance for Metaphlan.
-    overlapDict[sp]['Norm_Metaphlan'] = round(overlapDict[sp]['estimated_number_of_reads_from_the_clade']/sum(overlapDict[sp]['estimated_number_of_reads_from_the_clade']),4)
+    overlapDict[sp]['Norm_Metaphlan'] = round(overlapDict[sp]['estimated_number_of_reads_from_the_clade']/sum(overlapDict[sp]['estimated_number_of_reads_from_the_clade']),6)
     #Calculate Average overlap relative abundance over both tools.
-    overlapDict[sp]['Norm_Avg'] = round((overlapDict[sp]['Norm_Bracken']+overlapDict[sp]['Norm_Metaphlan'])/2,4)
+    overlapDict[sp]['Norm_Avg'] = round((overlapDict[sp]['Norm_Bracken']+overlapDict[sp]['Norm_Metaphlan'])/2,6)
     #Add sample's detected microbial species to the lists.
     micrSpecies+=list(overlapDict[sp]['name'])
     micrTaxIDs += list(overlapDict[sp]['taxonomy_id'])
