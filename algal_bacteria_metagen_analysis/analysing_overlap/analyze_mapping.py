@@ -30,6 +30,7 @@ import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 from matplotlib import cm
+import numpy as np
 
 RAFile ='/home/tamimftn/Desktop/algae_bac/code/algal_bacteria_metagen_analysis/mapping_results/overlap_RA_Microb_Algae_mapping.tsv'
 algSpFile = '/home/tamimftn/Desktop/algae_bac/code/algal_bacteria_metagen_analysis/spieces.csv'
@@ -205,7 +206,7 @@ def produce_pie_chart(mappingMatrix,aggTaxLevel,algaCellPhen,outDir,colorMap,phy
 # =============================================================================
 # Funcrion perform_pca 
 # =============================================================================
-def perform_pca(matrix,aggTaxLevel,uniCellAlg,multiCellAlg,outDir):
+def perform_pca(matrix,aggTaxLevel,uniCellAlg,multiCellAlg,outDir,figType):
     
     
     #Get relevant data only.
@@ -237,14 +238,23 @@ def perform_pca(matrix,aggTaxLevel,uniCellAlg,multiCellAlg,outDir):
     plt.scatter(pcsDf['PC1'],pcsDf['PC2'],c=colors)
     plt.scatter([], [], c='red', label='Unicellular') 
     plt.scatter([], [], c='blue', label='Multicellular') 
+    
+    outlierThreshold =5
+    # Calculate the distance from the origin for each point 
+    distances = np.sqrt(pcsDf['PC1']**2 + pcsDf['PC2']**2) 
+    # Add species names as text labels for outliers 
+    for species, (x, y), distance in zip(pcsDf.index, pcsDf.values, distances): 
+        if distance > outlierThreshold: 
+            plt.text(x, y, species, fontsize=6)
+    
     plt.legend(loc='upper right')
     plt.xlabel('PC1')
     plt.ylabel('PC2')
-    plt.title('PCA Analysis of Bacterial Abundance in Uni/Multi Cellular Algae '+ aggTaxLevel + '-wise ')
+    plt.title('PCA Analysis of Bacterial '+figType+' in Uni/Multi Cellular Algae '+ aggTaxLevel + '-wise ')
     plt.savefig(outDir+'PCA_BY_'+aggTaxLevel+'.png', format='png', dpi=300, bbox_inches='tight')
     explained_variance = pca.explained_variance_ratio_
     return explained_variance
-#%%
+
 # =============================================================================
 # Generating Figures.
 # =============================================================================
@@ -263,26 +273,27 @@ uniSpecificBacFig = produce_stacked_chart(uniSpecificBac,'Class',algaCellPhenWoC
 bacteriaRAPiChart=produce_pie_chart(bacRAinAlgSamps,'Class',algaCellPhen,outDir=outDir,colorMap=colorMap,phylum=None)
 
 #PCA by species for ORA.
-varRASpecies = perform_pca(bacRAinAlgSamps, 'Species', uniCellAlg, multiCellAlg,outDir=outDir)
+varRASpecies = perform_pca(bacRAinAlgSamps, 'Species', uniCellAlg, multiCellAlg,outDir=outDir,figType='Abundance')
 
 #PCA by Class for ORA.
-varRASpecies = perform_pca(bacRAinAlgSamps, 'Class', uniCellAlg, multiCellAlg,outDir=outDir)
+varRAClass = perform_pca(bacRAinAlgSamps, 'Class', uniCellAlg, multiCellAlg,outDir=outDir,figType='Abundance')
 
 #PCA by species for Detection.
-varDetSpecies = perform_pca(bacDetInAlgSamps, 'Species', uniCellAlg, multiCellAlg,outDir=outDir+'det_')
+varDetSpecies = perform_pca(bacDetInAlgSamps, 'Species', uniCellAlg, multiCellAlg,outDir=outDir+'det_',figType='Presence/Absence')
 
 #PCA by Class for Detection.
-varDetSpecies = perform_pca(bacDetInAlgSamps, 'Class', uniCellAlg, multiCellAlg,outDir=outDir+'det_')
+varDetClass = perform_pca(bacDetInAlgSamps, 'Class', uniCellAlg, multiCellAlg,outDir=outDir+'det_',figType='Presence/Absence')
 
 ##PCA by species for ORA without Chlamydomonas_Callosa
-varRASpeciesWoCall = perform_pca(bacRAinAlgSampsWoCall, 'Species', uniCellAlgWoCall, multiCellAlg,outDir=outDir+'wo_callosa_')
+varRASpeciesWoCall = perform_pca(bacRAinAlgSampsWoCall, 'Species', uniCellAlgWoCall, multiCellAlg,outDir=outDir+'wo_callosa_',figType='Abundance')
 
 ##PCA by species for Det without Chlamydomonas_Callosa
-varDetSpeciesWoCall = perform_pca(bacDetinAlgSampsWoCall, 'Species', uniCellAlgWoCall, multiCellAlg,outDir=outDir+'wo_callosa_det')
+varDetSpeciesWoCall = perform_pca(bacDetinAlgSampsWoCall, 'Species', uniCellAlgWoCall, multiCellAlg,outDir=outDir+'wo_callosa_det',figType='Presence/Absence')
 
 ##PCA by Class for ORA without Chlamydomonas_Callosa
-varRASpeciesWoCall = perform_pca(bacRAinAlgSampsWoCall, 'Class', uniCellAlgWoCall, multiCellAlg,outDir=outDir+'wo_callosa_')
-#%%
+varRAClassWoCall = perform_pca(bacRAinAlgSampsWoCall, 'Class', uniCellAlgWoCall, multiCellAlg,outDir=outDir+'wo_callosa_',figType='Abundance')
+
+#Statistics and most commons.
 totBacSp = len(bacRAinAlgSampsWoCall)
 mostCommon = bacRAinAlgSampsWoCall[bacRAinAlgSampsWoCall['#AlgSpTot'] == max(bacRAinAlgSampsWoCall['#AlgSpTot'])]['Microbial Species'].values[0],max(bacRAinAlgSampsWoCall['#AlgSpTot'])
 mostCommonMult = bacRAinAlgSampsWoCall[bacRAinAlgSampsWoCall['#MultAlgSp'] == max(bacRAinAlgSampsWoCall['#MultAlgSp'])]['Microbial Species'].values[0],max(bacRAinAlgSampsWoCall['#MultAlgSp'])
