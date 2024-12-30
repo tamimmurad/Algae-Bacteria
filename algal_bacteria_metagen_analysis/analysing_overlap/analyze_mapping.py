@@ -84,19 +84,22 @@ uniCellAlgWoCall = uniCellAlg.copy()
 uniCellAlgWoCall.remove('Chlamydomonas_callosa')
 
 #Common bacteria in both algal types
-commonBac = bacRAinAlgSampsWoCall[(bacRAinAlgSampsWoCall['#MultAlgSp'] >0) & (bacRAinAlgSampsWoCall['#UniAlgSp'] >0)]
+commonBac = bacRAinAlgSamps[(bacRAinAlgSamps['#MultAlgSp'] >0) & (bacRAinAlgSampsWoCall['#UniAlgSp'] >0)]
 
 #Bacterial species only present in multicellular algae samples
-multiSpecificBac = bacRAinAlgSampsWoCall[(bacRAinAlgSampsWoCall['#MultAlgSp'] >0) & (bacRAinAlgSampsWoCall['#UniAlgSp'] ==0)]
+multiSpecificBac = bacRAinAlgSamps[(bacRAinAlgSamps['#MultAlgSp'] >0) & (bacRAinAlgSamps['#UniAlgSp'] ==0)]
 
 #Bacterial species only present in Unicellular algae samples
-uniSpecificBac = bacRAinAlgSampsWoCall[(bacRAinAlgSampsWoCall['#MultAlgSp'] ==0) & (bacRAinAlgSampsWoCall['#UniAlgSp'] >0)]
+uniSpecificBac = bacRAinAlgSamps[(bacRAinAlgSamps['#MultAlgSp'] ==0) & (bacRAinAlgSamps['#UniAlgSp'] >0)]
 
-#Unique bacteria found only in one algal spices.
-uniqueBac = bacRAinAlgSampsWoCall[(bacRAinAlgSampsWoCall['#AlgSpTot'] ==1)]
+#Unique bacteria found only in one algal without Callosa spices.
+uniqueBac = bacRAinAlgSamps[(bacRAinAlgSamps['#AlgSpTot'] ==1)]
 
 
+#Unique bacteria found only in one algal without Callosa spices.
+uniqueBacWoCall = bacRAinAlgSampsWoCall[(bacRAinAlgSampsWoCall['#AlgSpTot'] ==1)]
 
+#%%
 # =============================================================================
 #  Function produce_stacked_chart. 
 # =============================================================================
@@ -139,9 +142,9 @@ def produce_stacked_chart(mappingMatrix,aggTaxLevel,algaCellPhen,figType,outDir,
     
     colors = [colorMap.get(className, "#333333") for className in aggrgatedT.columns]
     #Stacked par plot of bacterial RAs for each specified algal species.
-    if figType !='All':
-        figure,ax = plt.subplots(figsize=(15,8))
-        figure = aggrgatedT.plot.bar(stacked=True,ax=ax,rot = 90,color=colors,logy=logScale,fontsize=20).legend(bbox_to_anchor=(1.0,1.0))
+    if (figType !='All' and figType !='Unique'):
+        figure,ax = plt.subplots(figsize=(10,12))
+        figure = aggrgatedT.plot.barh(stacked=True,ax=ax,color=colors,logx=logScale,fontsize=20).legend(bbox_to_anchor=(1.0,1.0))
         figure.set_title('Bacterial '+ aggTaxLevel)
         plt.title(figType+' Specific Bacteria Relative Abundance by '+ aggTaxLevel + ' in ' + figType +' Algal Samples',fontsize=20)
         plt.savefig(outDir+figType +'by_algae_bac_by_'+aggTaxLevel+'.png', format='png', dpi=300, bbox_inches='tight')
@@ -159,8 +162,8 @@ def produce_stacked_chart(mappingMatrix,aggTaxLevel,algaCellPhen,figType,outDir,
         finalDF=pd.concat([finalDF,emptyDF])
         finalDF=pd.concat([finalDF,emptyDF])
         
-        figure,ax = plt.subplots(figsize=(15,8))
-        figure = finalDF.plot.bar(stacked=True,ax=ax,rot = 90,color=colors,logy=logScale).legend(bbox_to_anchor=(1.0,1.0))
+        figure,ax = plt.subplots(figsize=(10,12))
+        figure = finalDF.plot.barh(stacked=True,ax=ax,color=colors,logx=logScale).legend(bbox_to_anchor=(1.0,1.0))
         figure.set_title('Bacterial '+ aggTaxLevel)
         plt.title('Bacteria Relative Abundance by '+ aggTaxLevel + ' in  '+ figType +' Algal samples',fontsize=20)
         plt.savefig(outDir+figType+'_'+aggTaxLevel+'.png', format='png', dpi=300, bbox_inches='tight')
@@ -170,6 +173,7 @@ def produce_stacked_chart(mappingMatrix,aggTaxLevel,algaCellPhen,figType,outDir,
 # =============================================================================
 # Function produce_pie_chart
 # =============================================================================
+
 def produce_pie_chart(mappingMatrix,aggTaxLevel,algaCellPhen,outDir,colorMap,phylum=None):
     #If only one phylum is requested to be checked.
     if phylum:
@@ -192,16 +196,21 @@ def produce_pie_chart(mappingMatrix,aggTaxLevel,algaCellPhen,outDir,colorMap,phy
     #Totals of bacteria RA in each taxonimc group as per the taxa level in the specified algal species.
     totalBac=aggrgatedT.sum()
     
-    colors = [colorMap.get(className, "#333333") for className in totalBac.index] # Default to grey if not found
+    #Grouping low abundance classes as others.
+    totalBac.index = [index if value >= 1.5 else 'Others' for index, value in zip(totalBac.index, totalBac.values)]
+    totalBac = totalBac.groupby(totalBac.index).sum()
+    totalBac = totalBac.sort_values(ascending=False)
+    colors = [colorMap.get(className, "red") for className in totalBac.index] # Default to red if not found
+    
     
     #Pi chart showing RA of bacteria over all specified species.
     plt.figure()
-    piChart= totalBac.plot.pie(colors=colors,labels=['']*len(totalBac),autopct='%1.1f%%').legend(totalBac.index,bbox_to_anchor=(1.0,1.0),title='Bacterial '+aggTaxLevel)
+    piChart= totalBac.plot.pie(colors=colors,labels=['']*len(totalBac),pctdistance=1.1,autopct='%1.1f%%').legend(totalBac.index,bbox_to_anchor=(1.0,1.0),title='Bacterial '+aggTaxLevel)
     
     plt.title('Bacteria Overall Relative Abundance by '+ aggTaxLevel + ' in '  +' Algal Samples')
     plt.savefig(outDir+'overall_bac_by_'+aggTaxLevel+'.png', format='png', dpi=300, bbox_inches='tight')
     
-    return piChart
+    return piChart,totalBac
 
 # =============================================================================
 # Funcrion perform_pca 
@@ -259,6 +268,7 @@ def perform_pca(matrix,aggTaxLevel,uniCellAlg,multiCellAlg,outDir,figType):
 # Generating Figures.
 # =============================================================================
 
+
 #Bacterial classes RA for every algal sample.
 bacRAbyClassFig = produce_stacked_chart(bacRAinAlgSamps, 'Class', algaCellPhen, 'All',outDir=outDir,colorMap=colorMap,logScale=False)
 
@@ -267,7 +277,10 @@ bacRAbyClassFig = produce_stacked_chart(bacRAinAlgSamps, 'Class', algaCellPhen, 
 multiSpBacFig = produce_stacked_chart(multiSpecificBac,'Class',algaCellPhen[algaCellPhen['Phenotype']=='Multi'],'Multicellular',outDir=outDir,colorMap=colorMap,logScale=True)
 
 #Bacterial classes RA for unicellular specific bacteria.
-uniSpecificBacFig = produce_stacked_chart(uniSpecificBac,'Class',algaCellPhenWoCall[algaCellPhenWoCall['Phenotype']=='Uni'],'Unicellular',outDir=outDir,colorMap=colorMap,logScale=True)
+uniSpecificBacFig = produce_stacked_chart(uniSpecificBac,'Class',algaCellPhen[algaCellPhen['Phenotype']=='Uni'],'Unicellular',outDir=outDir,colorMap=colorMap,logScale=True)
+
+#Unique Bacterial classes RA.
+uniqBacFig = produce_stacked_chart(uniqueBac,'Class',algaCellPhen,'Unique',outDir=outDir,colorMap=colorMap,logScale=True)
 
 #Bacterial classes RA for overall samples.
 bacteriaRAPiChart=produce_pie_chart(bacRAinAlgSamps,'Class',algaCellPhen,outDir=outDir,colorMap=colorMap,phylum=None)
@@ -293,11 +306,20 @@ varDetSpeciesWoCall = perform_pca(bacDetinAlgSampsWoCall, 'Species', uniCellAlgW
 ##PCA by Class for ORA without Chlamydomonas_Callosa
 varRAClassWoCall = perform_pca(bacRAinAlgSampsWoCall, 'Class', uniCellAlgWoCall, multiCellAlg,outDir=outDir+'wo_callosa_',figType='Abundance')
 
-#Statistics and most commons.
+#Statistics and most commons without .
 totBacSp = len(bacRAinAlgSampsWoCall)
 mostCommon = bacRAinAlgSampsWoCall[bacRAinAlgSampsWoCall['#AlgSpTot'] == max(bacRAinAlgSampsWoCall['#AlgSpTot'])]['Microbial Species'].values[0],max(bacRAinAlgSampsWoCall['#AlgSpTot'])
 mostCommonMult = bacRAinAlgSampsWoCall[bacRAinAlgSampsWoCall['#MultAlgSp'] == max(bacRAinAlgSampsWoCall['#MultAlgSp'])]['Microbial Species'].values[0],max(bacRAinAlgSampsWoCall['#MultAlgSp'])
 mostCommonUni = bacRAinAlgSampsWoCall[bacRAinAlgSampsWoCall['#UniAlgSp'] == max(bacRAinAlgSampsWoCall['#UniAlgSp'])]['Microbial Species'].values[0],max(bacRAinAlgSampsWoCall['#UniAlgSp'])
+mostCommonMultSpe = multiSpecificBac[multiSpecificBac['#AlgSpTot']==max(multiSpecificBac['#AlgSpTot'])]['Microbial Species'].values[0],max(multiSpecificBac['#AlgSpTot'])
+mostCommonUniSpe = uniSpecificBac[uniSpecificBac['#AlgSpTot']==max(uniSpecificBac['#AlgSpTot'])]['Microbial Species'].values[0],max(uniSpecificBac['#AlgSpTot'])
+avgNumBac = totBacSp/len(algaCellPhen) 
+
+#Statistics with Callosa
+totBacSp = len(bacRAinAlgSamps)
+mostCommon = bacRAinAlgSamps[bacRAinAlgSamps['#AlgSpTot'] == max(bacRAinAlgSamps['#AlgSpTot'])]['Microbial Species'].values[0],max(bacRAinAlgSamps['#AlgSpTot'])
+mostCommonMult = bacRAinAlgSamps[bacRAinAlgSamps['#MultAlgSp'] == max(bacRAinAlgSamps['#MultAlgSp'])]['Microbial Species'].values[0],max(bacRAinAlgSamps['#MultAlgSp'])
+mostCommonUni = bacRAinAlgSamps[bacRAinAlgSamps['#UniAlgSp'] == max(bacRAinAlgSamps['#UniAlgSp'])]['Microbial Species'].values[0],max(bacRAinAlgSamps['#UniAlgSp'])
 mostCommonMultSpe = multiSpecificBac[multiSpecificBac['#AlgSpTot']==max(multiSpecificBac['#AlgSpTot'])]['Microbial Species'].values[0],max(multiSpecificBac['#AlgSpTot'])
 mostCommonUniSpe = uniSpecificBac[uniSpecificBac['#AlgSpTot']==max(uniSpecificBac['#AlgSpTot'])]['Microbial Species'].values[0],max(uniSpecificBac['#AlgSpTot'])
 avgNumBac = totBacSp/len(algaCellPhen) 
