@@ -1,0 +1,42 @@
+Species,Genus,Order,Phenotype,sample folder,Sample ID,
+Vitreochlamys_aulata,Vitreochlamys,Chlamydomonadales,Uni,P26503_123,SAG69.72,
+Chlamydomonas_asymmetrica,Chlamydomonas ,Chlamydomonadales,Uni,P26503_110,SAG11-41,
+Chlamydomonas_callosa,Chlamydomonas ,Chlamydomonadales,Uni,P26503_127,SAG9.72,
+Chlamydomonas_cribrum,Chlamydomonas ,Chlamydomonadales,Uni,P26503_112,SAG13.72,
+Chlamydomonas_fottii,Chlamydomonas ,Chlamydomonadales,Uni,P26503_117,SAG21.83,
+Chlamydomonas_globosa,Chlamydomonas ,Chlamydomonadales,Uni,P26503_124,SAG7.73,
+Chlamydomonas_isabeliensis,Chlamydomonas ,Chlamydomonadales,Uni,P28566_115,CHLISA_Bae13,Chlamydomonas 
+Chlamydomonas_latifons,Chlamydomonas ,Chlamydomonadales,Uni,P26503_125,SAG70.81,Eudorina
+Chlamydomonas_parallestriata,Chlamydomonas ,Chlamydomonadales,Uni,P26503_113,SAG14.88,Haematococcus 
+Chlamydomonas_petasus,Chlamydomonas ,Chlamydomonadales,Uni,P26503_108,SAG10.73,Lobomonas
+Chlamydomonas_pila,Chlamydomonas ,Chlamydomonadales,Uni,P26503_119,SAG39.72,Microglena
+Chlamydomonas_schloesseri,Chlamydomonas ,Chlamydomonadales,Uni,P26503_107,Pil01,Pandorina
+Chlamydomonas_sp.,Chlamydomonas ,Chlamydomonadales,Uni,P28566_116,CHLsp_Kgh28,Paulschulzia
+Chlamydomonas_typica,Chlamydomonas ,Chlamydomonadales,Uni,P28566_101,CHLTYP_Kgh01,Tetrabaena
+Chlamydomonas_zebra,Chlamydomonas ,Chlamydomonadales,Uni,P26503_109,SAG10.83,Tetraspora
+Haematococcus_lacustris,Haematococcus ,Chlamydomonadales,Uni,P28566_113,HAELAC_NIV9,Vitreochlamys
+Lobomonas_rostrata,Lobomonas,Chlamydomonadales,Uni,P26503_120,SAG45-1,Volvox
+Microglena_globulifera,Microglena,Chlamydomonadales,Uni,P28566_104,MICGLO_Lie01,
+Vitreochlamys_fluviatilis,Vitreochlamys,Chlamydomonadales,Uni,P26503_106,NIVA178,
+Vitreochlamys_ordinata,Vitreochlamys,Chlamydomonadales,Uni,P28566_110,VITORD_Kgh02,
+Vitreochlamys_spec.,Vitreochlamys,Chlamydomonadales,Uni,P26503_111,SAG12.93,
+Volvox_aureus,Volvox,Chlamydomonadales,Multi,P26503_102,K1013,
+Eudorina_elegans,Eudorina,Chlamydomonadales,Multi,P26503_105,NIVA14,
+Eudorina_unicocca,Eudorina,Chlamydomonadales,Multi,P26503_118,SAG24-1c,
+Pandorina_morum,Pandorina,Chlamydomonadales,Multi,P26503_103,K1379,
+Pandorina_sp.,Pandorina,Chlamydomonadales,Multi,P26503_104,Kgh192,
+Paulschulzia_pseudovolvox,Paulschulzia,Chlamydomonadales,Multi,P26503_114,SAG17.94,
+Tetrabaena_socialis,Tetrabaena,Chlamydomonadales,Multi,P28566_102,TETSOC_Nbe02,
+Volvox_barberi,Volvox,Chlamydomonadales,Multi,P28566_120,VOLVBAR_NIES730,
+Volvox_giga,Volvox,Chlamydomonadales,Multi,P28566_121,VOLGIG_NIES867,
+Volvox_globator,Volvox,Chlamydomonadales,Multi,P28566_117,VOLGLO_SAG199_80,
+Volvox_sp.,Volvox,Chlamydomonadales,Multi,P26503_101,Bys01,
+Volvox_tertius,Volvox,Chlamydomonadales,Multi,P26503_126,SAG88-3,
+Tetraspora_cylindrica,Tetraspora,Tetrasporales,Multi,P26503_122,SAG63.94,
+Chlamydomonas_parallestriata_s2,Chlamydomonas ,Chlamydomonadales,Uni,P28566_103,CHLPAR_Nbe06,
+Vitreochlamys_ordinata_s2,Vitreochlamys,Chlamydomonadales,Uni,P28566_114,VITORD_NIES882,
+Chlamydomonas_typica_s2,Chlamydomonas ,Chlamydomonadales,Uni,P28566_119,CHLTYP_SAG61_72,
+Chlamydomonas_parallestriata_s3,Chlamydomonas ,Chlamydomonadales,Uni,P28566_106,CHLPAR_Osg03,
+Chlamydomonas_parallestriata_s4,Chlamydomonas ,Chlamydomonadales,Uni,P28566_107,CHLPAR_Hin04,
+Chlamydomonas_parallestriata_s5,Chlamydomonas ,Chlamydomonadales,Uni,P28566_108,CHLPAR_Nbe04,
+Chlamydomonas_parallestriata_s6,Chlamydomonas ,Chlamydomonadales,Uni,P28566_112,CHLPAR_Osg16,
